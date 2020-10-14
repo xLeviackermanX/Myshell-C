@@ -1,6 +1,6 @@
 
 
-COMMAND THAT I IMPLEMENTED:-
+#COMMAND THAT I IMPLEMENTED:-
 
 1. cd command with your code directory being home directory for shell
 2. echo, pwd , ls (with flags l and a)
@@ -21,7 +21,7 @@ COMMAND THAT I IMPLEMENTED:-
 
 
 
-INFORMATION ABOUT MY SHELL IMPLEMENTATION:-
+#INFORMATION ABOUT MY SHELL IMPLEMENTATION:-
 
 
 1. Shell loop is in main.c
