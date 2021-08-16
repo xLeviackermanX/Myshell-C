@@ -1,7 +1,7 @@
 #include "headers.h"
 #include "inbuilt.h"
 #define ll long long int 
-char shell_path[]="/home/priyansh/shell";
+// char shell_path[]="/home/priyansh/shell";
 int cd(char *str)
 {
 	char *path;

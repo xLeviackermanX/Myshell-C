@@ -21,20 +21,25 @@ int main()
 		{
 			if(bg[i]==-1)
 					continue;
-				int b;
-				int f = waitpid(bg[i],&b ,WNOHANG);
-				
-				if(f!=0)
-				{
-					if(WIFEXITED(b))
-						fprintf(stderr, "%s with pid %d exited normally\n",pro[i],bg[i]);
-					else
-						fprintf(stderr , "%s with pid %d exited abnormally\n",pro[i],bg[i]);
-					bg[i]=-1;
-					for(ll j=i+1;j<1000;j++)
-						bg[j-1]=bg[j];
-					i--;
-				}
+			int b;
+			int f = waitpid(bg[i],&b ,WNOHANG);
+
+			if(f==-1){
+				//error handling.
+				continue;
+			}
+
+			if(f!=0)
+			{
+				if(WIFEXITED(b))
+					fprintf(stderr, "%s with pid %d exited normally\n",pro[i],bg[i]);
+				else
+					fprintf(stderr , "%s with pid %d exited abnormally\n",pro[i],bg[i]);
+				bg[i]=-1;
+				for(ll j=i+1;j<1000;j++)
+					bg[j-1]=bg[j];
+				i--;
+			}
 		}
 		
 		user_name();
